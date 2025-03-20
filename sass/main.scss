@@ -1,0 +1,176 @@
+// colors
+$bg-color: #eafef1;
+$bg-dark-color: #518891;
+$white-color: #ffffff;
+$car-color: #f23838;
+$seat-color: #1c234e;
+$tyre-color: #1c234e;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, $bg-color 53%, $bg-dark-color 53%);
+  overflow: hidden;
+
+  * {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+  }
+}
+
+.car {
+  width: 75vmin;
+  height: 30vmin;
+
+  .body {
+    z-index: 2;
+    width: inherit;
+    height: 14.9vmin;
+    background: $car-color;
+    top: 7.4vmin;
+    border-top-right-radius: 7vmin;
+    border-top-left-radius: 4vmin;
+    border-bottom: 3.8vmin solid $white-color;
+    border-bottom-right-radius: 1vmin;
+    border-bottom-left-radius: 1vmin;
+
+    &::before {
+      width: 24vmin;
+      height: 4.5vmin;
+      background: $car-color;
+      transform: rotate(-12deg);
+      top: -2.4vmin;
+      border-top-left-radius: 4vmin;
+    }
+
+    &::after {
+      width: 23.5vmin;
+      height: 11.5vmin;
+      background: $car-color;
+      left: 33.2vmin;
+      top: -11.2vmin;
+      transform: skewX(35deg);
+    }
+  }
+
+  .seat {
+    z-index: 3;
+    width: 18.4vmin;
+    height: 3.7vmin;
+    background: $seat-color;
+    top: -11.2vmin;
+    left: -18.8vmin;
+
+    &::before {
+      width: 7.4vmin;
+      height: 7.4vmin;
+      background: $seat-color;
+      border-radius: 50%;
+      top: -3.8vmin;
+    }
+
+    &::after {
+      width: 7.4vmin;
+      height: 7.4vmin;
+      background: $seat-color;
+      border-radius: 50%;
+      top: -3.8vmin;
+      left: 11.2vmin;
+    }
+  }
+
+  .mirror {
+    z-index: 4;
+    width: 19.4vmin;
+    height: 7.5vmin;
+    background: $white-color;
+    left: 21.7vmin;
+    top: -15vmin;
+    transform: skewX(35deg);
+
+    &::before {
+      width: 4vmin;
+      height: 9vmin;
+      background: $car-color;
+      left: -4.3vmin;
+      top: -1vmin;
+    }
+  }
+
+  .lamp {
+    z-index: 4;
+    width: 4vmin;
+    height: 3.8vmin;
+    background: $white-color;
+    left: 34vmin;
+    top: 3.8vmin;
+    border-bottom-left-radius: 4vmin;
+
+    &::before {
+      width: 4vmin;
+      height: 3.8vmin;
+      background: $white-color;
+      left: 3.7vmin;
+      border-top-right-radius: 4vmin;
+    }
+
+    &::after {
+      width: 3.7vmin;
+      height: 3.8vmin;
+      background: $white-color;
+      left: 18.8vmin;
+      border-top-left-radius: 4vmin;
+    }
+  }
+
+  .tyre-right {
+    z-index: 4;
+    width: 15vmin;
+    height: 15vmin;
+    border-radius: 50%;
+    background: $white-color;
+    border: 3.7vmin solid $tyre-color;
+    left: -52.3vmin;
+    top: 15vmin;
+
+    &::before {
+      width: 7.5vmin;
+      height: 7.5vmin;
+      border-radius: 50%;
+      background: $white-color;
+      border: 3.7vmin solid $tyre-color;
+      left: 30vmin;
+      top: -3.6vmin;
+    }
+  }
+
+  .tyre-left {
+    z-index: 1;
+    width: 14.5vmin;
+    height: 14.5vmin;
+    background: $tyre-color;
+    border-radius: 50%;
+    top: 15.8vmin;
+    left: -15vmin;
+
+    &::before {
+      width: 14.5vmin;
+      height: 14.5vmin;
+      background: $tyre-color;
+      border-radius: 50%;
+      left: 33.8vmin;
+    }
+  }
+}
