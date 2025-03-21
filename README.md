@@ -1,4 +1,4 @@
-# PureCSS - Responsive Sports Car
+# Responsive Sports Car
 
 Responsive Sports Car using HTML and CSS
 
